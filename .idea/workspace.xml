@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< 8aba0b1ef7f49d2dea19602ab7754a898123d52b
 <<<<<<< 2fbe00e2ad4c361fbc2a69de4db8ab786cdb6c9b
 <<<<<<< f909c1a548624876d43e6d45b5d4bb3f030b68ab
     <list default="true" id="40d21052-a54c-45eb-90b1-a056e98796bf" name="Default" comment="">
@@ -1275,6 +1276,16 @@
 =======
     <list default="true" id="0b8c3904-743a-4e31-9b16-6dc1f8f564d0" name="Default" comment="" />
 >>>>>>> 添加util文件夹
+=======
+<<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
+    <list default="true" id="0b8c3904-743a-4e31-9b16-6dc1f8f564d0" name="Default" comment="" />
+=======
+    <list default="true" id="0b8c3904-743a-4e31-9b16-6dc1f8f564d0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+    </list>
+>>>>>>> 添加请求demo
+>>>>>>> 添加请求demo
     <ignored path="fe_jiankang.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -1293,6 +1304,7 @@
     <favorites_list name="fe_jiankang" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< 8aba0b1ef7f49d2dea19602ab7754a898123d52b
 <<<<<<< 2fbe00e2ad4c361fbc2a69de4db8ab786cdb6c9b
 <<<<<<< f909c1a548624876d43e6d45b5d4bb3f030b68ab
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
@@ -1302,6 +1314,9 @@
 =======
     <leaf />
 =======
+=======
+<<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
+>>>>>>> 添加请求demo
     <leaf>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
@@ -1327,7 +1342,13 @@
         </entry>
       </file>
     </leaf>
+<<<<<<< 8aba0b1ef7f49d2dea19602ab7754a898123d52b
 >>>>>>> 添加util文件夹
+=======
+=======
+    <leaf />
+>>>>>>> 添加请求demo
+>>>>>>> 添加请求demo
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -1348,6 +1369,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< 8aba0b1ef7f49d2dea19602ab7754a898123d52b
 <<<<<<< f909c1a548624876d43e6d45b5d4bb3f030b68ab
         <option value="$PROJECT_DIR$/index.html" />
 =======
@@ -1355,6 +1377,16 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/demo.html" />
 >>>>>>> 使用gulp实现html代码复用
+=======
+<<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/demo.html" />
+=======
+        <option value="$PROJECT_DIR$/demo.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+>>>>>>> 添加请求demo
+>>>>>>> 添加请求demo
       </list>
     </option>
   </component>
@@ -1459,6 +1491,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+<<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
+=======
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fe_jiankang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fe_jiankang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resource" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+>>>>>>> 添加请求demo
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -2015,16 +2064,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1489998268897</updated>
+<<<<<<< 8aba0b1ef7f49d2dea19602ab7754a898123d52b
 <<<<<<< 2fbe00e2ad4c361fbc2a69de4db8ab786cdb6c9b
       <workItem from="1489998270746" duration="434000" />
 >>>>>>> 使用gulp实现html代码复用
 =======
       <workItem from="1489998270746" duration="449000" />
 >>>>>>> 添加util文件夹
+=======
+<<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
+      <workItem from="1489998270746" duration="449000" />
+=======
+      <workItem from="1489998270746" duration="227000" />
+>>>>>>> 添加请求demo
+>>>>>>> 添加请求demo
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< 8aba0b1ef7f49d2dea19602ab7754a898123d52b
 <<<<<<< 2fbe00e2ad4c361fbc2a69de4db8ab786cdb6c9b
 <<<<<<< f909c1a548624876d43e6d45b5d4bb3f030b68ab
     <option name="totallyTimeSpent" value="1143000" />
@@ -2043,6 +2101,13 @@
 =======
     <option name="totallyTimeSpent" value="449000" />
 >>>>>>> 添加util文件夹
+=======
+<<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
+    <option name="totallyTimeSpent" value="449000" />
+=======
+    <option name="totallyTimeSpent" value="227000" />
+>>>>>>> 添加请求demo
+>>>>>>> 添加请求demo
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="997" extended-state="6" />
@@ -2083,11 +2148,19 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+<<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32992035" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+>>>>>>> 添加请求demo
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2131,6 +2204,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
 =======
   <component name="editorHistoryManager">
+<<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -2143,19 +2217,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+<<<<<<< 8aba0b1ef7f49d2dea19602ab7754a898123d52b
 >>>>>>> 使用gulp实现html代码复用
+=======
+=======
+    <entry file="file://$PROJECT_DIR$/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+>>>>>>> 添加请求demo
+>>>>>>> 添加请求demo
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< 8aba0b1ef7f49d2dea19602ab7754a898123d52b
 <<<<<<< f909c1a548624876d43e6d45b5d4bb3f030b68ab
         <state relative-caret-position="674">
           <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
 =======
+=======
+<<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
+>>>>>>> 添加请求demo
         <state relative-caret-position="161">
           <caret line="113" column="7" selection-start-line="113" selection-start-column="7" selection-end-line="113" selection-end-column="7" />
+=======
+        <state relative-caret-position="115">
+          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+>>>>>>> 添加请求demo
           <folding>
             <element signature="n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -2163,11 +2254,21 @@
         </state>
       </provider>
     </entry>
+<<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
     <entry file="file://$PROJECT_DIR$/demo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
           <caret line="105" column="7" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="7" />
+<<<<<<< 8aba0b1ef7f49d2dea19602ab7754a898123d52b
 >>>>>>> 使用gulp实现html代码复用
+=======
+=======
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+>>>>>>> 添加请求demo
+>>>>>>> 添加请求demo
           <folding />
         </state>
       </provider>
