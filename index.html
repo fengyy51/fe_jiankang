@@ -1,114 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('Page/include/pagehead.html',{"pagehead1":"爱康商城"})
 
+<head>
+    <meta charset="UTF-8">
+    <title>测试页</title>
+</head>
 
 <body>
-    <div class="Page" id="firstPage">
-		@@include('Page/include/header.html')
-        <!--  <!--    <!-- 首页 最热tab -->
-            <div class=" header am-search-inpage am-input-autoclear">
-                <div class="am-search-input">
-                    <div class="am-search-icon" aria-hidden="true">
-                        <i class="am-icon search-inpage"></i>
-                    </div>
-                    <input class="am-search-value" type="text" placeholder="搜索" value="" aria-label="关键词">
-                    <div class="am-search-clear" tabindex="0" aria-controls="demo-search-ipt-1">
-                        <i class="am-icon-clear am-icon clear-tiny" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
-		
-
-
-
-    <!-- 内容栏 -->
-        <div class="bodyer">
-            <!-- 分类查找商品 -->
-            <div class="select_type">
-            <!-- 按类别展示商品 -->
-                <div class="show_item">
-                     <div class="show_item_showing">
-                     <!--  第一行：展示商品类别-->
-                        <div class="show_item_type">
-                            <span class="show_item_type_text">味蕾培养</span>
-                            <span class="show_item_type_logo">
-                                <img src="../resource/fonts/more.png">
-                            </span>
-                        </div>
-                     <!-- 第二行：展示商品具体信息 -->
-                        <div class="show_item_detailed"> 
-                            <div class="show_item_detailed_showing">
-                                <img  class="item_img" src="../resource/img/item_one.jpg">
-                                <br>
-                                <span class="item_text">蔓越莓干+高级美颜+从内至外</span>
-                                <br>
-                                <span class="item_decoration">
-                                    平和质
-                                </span>
-                                <br>
-                                <span class="item_money">
-                                    RMB:36.00
-                                </span>
-                            </div>
-                             <div class="show_item_detailed_showing">
-                                <img  class="item_img" src="../resource/img/item_two.jpg">
-                                <br>
-                                <span class="item_text">蔓越莓干+高级美颜+从内至外</span>
-                                <br>
-                                <span class="item_decoration">
-                                    平和质
-                                </span>
-                                <br>
-                                <span class="item_money">
-                                    RMB:36.00
-                                </span>
-                            </div>
-                             <div class="show_item_detailed_showing">
-                                <img class="item_img" src="../resource/img/item_three.jpg">
-                                <br>
-                                <span class="item_text">蔓越莓干+高级美颜+从内至外</span>
-                                <br>
-                                <span class="item_decoration">
-                                    平和质
-                                </span>
-                                <br>
-                                <span class="item_money">
-                                    RMB:36.00
-                                </span>
-                            </div>
-                             <div class="show_item_detailed_showing">
-                                <img  class="item_img" src="../resource/img/item_four.jpg">
-                                <br>
-                                <span class="item_text">蔓越莓干+高级美颜+从内至外</span>
-                                <br>
-                                <span class="item_decoration">
-                                    平和质
-                                </span>
-                                <br>
-                                <span class="item_money">
-                                    RMB:36.00
-                                </span>
-                            </div>
-                
-                        </div>
-
-                           
-                    
-               
-                
-                     </div>
-                
-                 </div>
-            </div>
-
-        </div>
-		@@include('Page/include/footer.html')
-
-
-   
-    <script type="text/javascript" src="../js/lib/zepto.js"></script>
-    <script type="text/javascript" src="../js/util/util.js"></script>
+    <h1>商品添加</h1>
+    <form id="add_form">
+        <table>
+            <tr>
+                <th>商品名称:</th>
+                <td>
+                    <input type="text" id="itemName">
+                </td>
+                <th>商品价钱:</th>
+                <td>
+                    <input type="text" id="price">
+                </td>
+            </tr>
+            <tr>
+                <th>是否包邮:</th>
+                <td>
+                    <input type="radio" name="free_deliverly" value="1">是 &nbsp;&nbsp;
+                    <input type="radio" name="free_deliverly" value="0">否
+                </td>
+                <th>商品状态:</th>
+                <td>
+                    <input type="radio" name="status" value="1">上架 &nbsp;&nbsp;
+                    <input type="radio" name="status" value="0">下架
+                </td>
+            </tr>
+            <tr>
+                <th>商品库存:</th>
+                <td>
+                    <input type="text" id="stock">
+                </td>
+            </tr>
+            <tr>
+                <th>商品图片1:</th>
+                <td>
+                    <input type="text" id="img1" value="http://omy6hbb54.bkt.clouddn.com/hadeng.jpg">
+                </td>
+                <th>商品图片1描述:</th>
+                <td>
+                    <input type="text" id="img1_text">
+                </td>
+            </tr>
+            <tr>
+                <th>商品图片2:</th>
+                <td>
+                    <input type="text" id="img2" value="http://omy6hbb54.bkt.clouddn.com/%E5%A4%B4%E5%83%8F.PNG">
+                </td>
+                <th>商品图片2描述:</th>
+                <td>
+                    <input type="text" id="img2_text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" id="submit_btn" value="添加">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script type="text/javascript" src="./js/lib/zepto.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var $btn = $("#submit_btn");
+        $btn.on("click", function() {
+            var itemName = $("#itemName").val();
+            var price = $("#price").val();
+            var stock = $("#stock").val();
+            var status = $("input[name='status']:checked").val()
+            var freeDeliverly = $("input[name='free_deliverly']:checked").val();  
+            var bigImgs = [];
+            bigImgs.push($("#img1").val());
+            bigImgs.push($("#img2").val());
+            var titles = [];
+            titles.push($("#img1_text").val());
+            titles.push($("#img2_text").val());
+            $.ajax({
+            	url: "http://localhost:8083/item/add",
+            	type: 'POST',
+            	data:{
+            		titles:titles,
+            		stock:stock,
+            		bigImgs:bigImgs,
+            		status:status,
+            		freeDeliverly:freeDeliverly,
+            		price:price,
+            		itemName:itemName
+            	},
+            	success:function(res){
+            		res = typeof res === 'string' ? JSON.parse(res) : res;
+            		console.log(res);
+            	}
+            })
+        });
+    })
+    </script>
 </body>
 
 </html>
