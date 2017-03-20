@@ -5,8 +5,7 @@
     <list default="true" id="0b8c3904-743a-4e31-9b16-6dc1f8f564d0" name="Default" comment="" />
 =======
     <list default="true" id="0b8c3904-743a-4e31-9b16-6dc1f8f564d0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
 >>>>>>> 添加请求demo
     <ignored path="fe_jiankang.iws" />
@@ -82,7 +81,11 @@
 =======
         <option value="$PROJECT_DIR$/demo.html" />
         <option value="$PROJECT_DIR$/index.html" />
+<<<<<<< f3db91ab814d0d77295c77d703f1fc06249bb447
 >>>>>>> 添加请求demo
+=======
+        <option value="$PROJECT_DIR$/.gitignore" />
+>>>>>>> 添加gulp合并
       </list>
     </option>
   </component>
@@ -145,6 +148,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+<<<<<<< f3db91ab814d0d77295c77d703f1fc06249bb447
 <<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
 =======
           <PATH>
@@ -162,6 +166,8 @@
             </PATH_ELEMENT>
           </PATH>
 >>>>>>> 添加请求demo
+=======
+>>>>>>> 添加gulp合并
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -656,6 +662,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1489998268897</updated>
+<<<<<<< f3db91ab814d0d77295c77d703f1fc06249bb447
 <<<<<<< da6ec30790ad338b5b58ec80bc62ff4e5e5e97b6
 <<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
       <workItem from="1489998270746" duration="449000" />
@@ -665,10 +672,14 @@
 =======
       <workItem from="1489998270746" duration="271000" />
 >>>>>>> cache
+=======
+      <workItem from="1489998270746" duration="351000" />
+>>>>>>> 添加gulp合并
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< f3db91ab814d0d77295c77d703f1fc06249bb447
 <<<<<<< da6ec30790ad338b5b58ec80bc62ff4e5e5e97b6
 <<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
     <option name="totallyTimeSpent" value="449000" />
@@ -678,6 +689,9 @@
 =======
     <option name="totallyTimeSpent" value="271000" />
 >>>>>>> cache
+=======
+    <option name="totallyTimeSpent" value="351000" />
+>>>>>>> 添加gulp合并
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="997" extended-state="6" />
@@ -786,6 +800,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< f3db91ab814d0d77295c77d703f1fc06249bb447
 <<<<<<< da6ec30790ad338b5b58ec80bc62ff4e5e5e97b6
 <<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
     <entry file="file://$PROJECT_DIR$/demo.html">
@@ -798,11 +813,20 @@
         <state relative-caret-position="184">
           <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
 >>>>>>> 添加请求demo
+=======
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+>>>>>>> 添加gulp合并
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< f3db91ab814d0d77295c77d703f1fc06249bb447
 =======
 >>>>>>> cache
+=======
+>>>>>>> 添加gulp合并
   </component>
 </project>
