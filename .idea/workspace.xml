@@ -1281,7 +1281,7 @@
     <list default="true" id="0b8c3904-743a-4e31-9b16-6dc1f8f564d0" name="Default" comment="" />
 =======
     <list default="true" id="0b8c3904-743a-4e31-9b16-6dc1f8f564d0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
 >>>>>>> 添加请求demo
@@ -2064,6 +2064,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1489998268897</updated>
+<<<<<<< aa8f57289fb42b8d3efaa1d0574c452fcc5590a0
 <<<<<<< 8aba0b1ef7f49d2dea19602ab7754a898123d52b
 <<<<<<< 2fbe00e2ad4c361fbc2a69de4db8ab786cdb6c9b
       <workItem from="1489998270746" duration="434000" />
@@ -2072,16 +2073,26 @@
       <workItem from="1489998270746" duration="449000" />
 >>>>>>> 添加util文件夹
 =======
+=======
+<<<<<<< da6ec30790ad338b5b58ec80bc62ff4e5e5e97b6
+>>>>>>> cache
 <<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
       <workItem from="1489998270746" duration="449000" />
 =======
       <workItem from="1489998270746" duration="227000" />
 >>>>>>> 添加请求demo
+<<<<<<< aa8f57289fb42b8d3efaa1d0574c452fcc5590a0
 >>>>>>> 添加请求demo
+=======
+=======
+      <workItem from="1489998270746" duration="271000" />
+>>>>>>> cache
+>>>>>>> cache
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< aa8f57289fb42b8d3efaa1d0574c452fcc5590a0
 <<<<<<< 8aba0b1ef7f49d2dea19602ab7754a898123d52b
 <<<<<<< 2fbe00e2ad4c361fbc2a69de4db8ab786cdb6c9b
 <<<<<<< f909c1a548624876d43e6d45b5d4bb3f030b68ab
@@ -2102,12 +2113,21 @@
     <option name="totallyTimeSpent" value="449000" />
 >>>>>>> 添加util文件夹
 =======
+=======
+<<<<<<< da6ec30790ad338b5b58ec80bc62ff4e5e5e97b6
+>>>>>>> cache
 <<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
     <option name="totallyTimeSpent" value="449000" />
 =======
     <option name="totallyTimeSpent" value="227000" />
 >>>>>>> 添加请求demo
+<<<<<<< aa8f57289fb42b8d3efaa1d0574c452fcc5590a0
 >>>>>>> 添加请求demo
+=======
+=======
+    <option name="totallyTimeSpent" value="271000" />
+>>>>>>> cache
+>>>>>>> cache
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="997" extended-state="6" />
@@ -2231,14 +2251,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< aa8f57289fb42b8d3efaa1d0574c452fcc5590a0
 <<<<<<< 8aba0b1ef7f49d2dea19602ab7754a898123d52b
 <<<<<<< f909c1a548624876d43e6d45b5d4bb3f030b68ab
         <state relative-caret-position="674">
           <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
 =======
 =======
+=======
+<<<<<<< da6ec30790ad338b5b58ec80bc62ff4e5e5e97b6
+>>>>>>> cache
 <<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
 >>>>>>> 添加请求demo
         <state relative-caret-position="161">
@@ -2247,6 +2279,10 @@
         <state relative-caret-position="115">
           <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
 >>>>>>> 添加请求demo
+=======
+        <state relative-caret-position="138">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+>>>>>>> cache
           <folding>
             <element signature="n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -2254,6 +2290,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< da6ec30790ad338b5b58ec80bc62ff4e5e5e97b6
 <<<<<<< 4b5199514e7eefe88ef48d439d4c0c062150b9aa
     <entry file="file://$PROJECT_DIR$/demo.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -2273,6 +2310,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> cache
   </component>
 <<<<<<< f909c1a548624876d43e6d45b5d4bb3f030b68ab
   <component name="masterDetails">
