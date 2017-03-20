@@ -1,10 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
+@@include('Page/include/pagehead.html',{"pagehead1":"爱康商城"})
+
+
 <body>
-    
+    <div class="Page" id="firstPage">
+		@@include('Page/include/header.html')
+        <!--  <!--    <!-- 首页 最热tab -->
+            <div class=" header am-search-inpage am-input-autoclear">
+                <div class="am-search-input">
+                    <div class="am-search-icon" aria-hidden="true">
+                        <i class="am-icon search-inpage"></i>
+                    </div>
+                    <input class="am-search-value" type="text" placeholder="搜索" value="" aria-label="关键词">
+                    <div class="am-search-clear" tabindex="0" aria-controls="demo-search-ipt-1">
+                        <i class="am-icon-clear am-icon clear-tiny" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+		
+
+
+
+    <!-- 内容栏 -->
+        <div class="bodyer">
+            <!-- 分类查找商品 -->
+            <div class="select_type">
+            <!-- 按类别展示商品 -->
+                <div class="show_item">
+                     <div class="show_item_showing">
+                     <!--  第一行：展示商品类别-->
+                        <div class="show_item_type">
+                            <span class="show_item_type_text">味蕾培养</span>
+                            <span class="show_item_type_logo">
+                                <img src="../resource/fonts/more.png">
+                            </span>
+                        </div>
+                     <!-- 第二行：展示商品具体信息 -->
+                        <div class="show_item_detailed"> 
+                            <div class="show_item_detailed_showing">
+                                <img  class="item_img" src="../resource/img/item_one.jpg">
+                                <br>
+                                <span class="item_text">蔓越莓干+高级美颜+从内至外</span>
+                                <br>
+                                <span class="item_decoration">
+                                    平和质
+                                </span>
+                                <br>
+                                <span class="item_money">
+                                    RMB:36.00
+                                </span>
+                            </div>
+                             <div class="show_item_detailed_showing">
+                                <img  class="item_img" src="../resource/img/item_two.jpg">
+                                <br>
+                                <span class="item_text">蔓越莓干+高级美颜+从内至外</span>
+                                <br>
+                                <span class="item_decoration">
+                                    平和质
+                                </span>
+                                <br>
+                                <span class="item_money">
+                                    RMB:36.00
+                                </span>
+                            </div>
+                             <div class="show_item_detailed_showing">
+                                <img class="item_img" src="../resource/img/item_three.jpg">
+                                <br>
+                                <span class="item_text">蔓越莓干+高级美颜+从内至外</span>
+                                <br>
+                                <span class="item_decoration">
+                                    平和质
+                                </span>
+                                <br>
+                                <span class="item_money">
+                                    RMB:36.00
+                                </span>
+                            </div>
+                             <div class="show_item_detailed_showing">
+                                <img  class="item_img" src="../resource/img/item_four.jpg">
+                                <br>
+                                <span class="item_text">蔓越莓干+高级美颜+从内至外</span>
+                                <br>
+                                <span class="item_decoration">
+                                    平和质
+                                </span>
+                                <br>
+                                <span class="item_money">
+                                    RMB:36.00
+                                </span>
+                            </div>
+                
+                        </div>
+
+                           
+                    
+               
+                
+                     </div>
+                
+                 </div>
+            </div>
+
+        </div>
+		@@include('Page/include/footer.html')
+
+
+   
+    <script type="text/javascript" src="../js/lib/zepto.js"></script>
+    <script type="text/javascript" src="../js/util/util.js"></script>
 </body>
+
 </html>
