@@ -1,14 +1,4 @@
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
 .idea/
 node_modules/
 dist/
-
-
-
-
 
