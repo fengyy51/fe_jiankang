@@ -6,12 +6,10 @@ var utf8Convert = require('gulp-utf8-convert');
 
 gulp.task('fileinclude', function() {
 
-<<<<<<< HEAD
-    gulp.src('page/test.html')
-=======
-    gulp.src('index.html')
->>>>>>> origin/master
-        .pipe(fileinclude({
+
+    gulp.src('page/tizhitest.html')
+
+         .pipe(fileinclude({
           prefix: '@@',
           basepath: '@file'
         }))
@@ -19,11 +17,10 @@ gulp.task('fileinclude', function() {
 	
 });
 gulp.task('convert',function() {
-<<<<<<< HEAD
-    gulp.src("page/test.html")
-=======
-    gulp.src("index.html")
->>>>>>> origin/master
+
+    gulp.src("page/tizhitest.html")
+    
+
         .pipe(utf8Convert({
             encNotMatchHandle:function (file) {
                 //notify 

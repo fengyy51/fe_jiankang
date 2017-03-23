@@ -1,9 +1,9 @@
 span.real-title-tizhi{
 	margin: 1em 0 1em 1em;
 }
-.hidden{
+.disable div.question-options{
 	visibility: hidden;
 }
-.question-no{
-	
+.active{
+	visibility: visible;
 }
