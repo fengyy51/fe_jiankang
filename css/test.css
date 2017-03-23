@@ -2,8 +2,15 @@ span.real-title-tizhi{
 	margin: 1em 0 1em 1em;
 }
 .disable div.question-options{
-	visibility: hidden;
+	display: none;
 }
 .active{
-	visibility: visible;
+	display: block;
+}
+.question{
+	border-bottom-style: 1px solid gray;
+}
+.addcolor{
+	background: #219E4E;
+	color: #FFF;
 }
