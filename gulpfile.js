@@ -7,9 +7,12 @@ var utf8Convert = require('gulp-utf8-convert');
 gulp.task('fileinclude', function() {
 
 
+
     gulp.src('page/tizhitest.html')
 
          .pipe(fileinclude({
+
+
           prefix: '@@',
           basepath: '@file'
         }))
@@ -18,8 +21,10 @@ gulp.task('fileinclude', function() {
 });
 gulp.task('convert',function() {
 
+
     gulp.src("page/tizhitest.html")
     
+
 
         .pipe(utf8Convert({
             encNotMatchHandle:function (file) {
