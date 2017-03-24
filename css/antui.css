@@ -1,10 +1,6 @@
-html,body{
-    width: 100%;
-}
-
-am-search-inpage .am-fixed,
+.am-fixed,
 .am-flexbox.average .am-flexbox-item {
-    width: 100%;
+    width: 100%
 }
 
 .am-flexbox,
@@ -28,7 +24,6 @@ th {
 :after,
 :before {
     -webkit-tap-highlight-color: transparent
-    
 }
 
 blockquote,
@@ -110,28 +105,16 @@ button,
 input,
 select,
 textarea {
-    font-size: .2rem;
+    font-size: .16rem;
     line-height: 1.5;
-
     color: #000;
     font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif
 }
 
 input {
-
-    letter-spacing: 1em;
-    width: 100%;
     line-height: normal
-
-
 }
-input.am-search-value{
-    padding: 3px;
-    margin: .5em 3px 0 3px;
-    border: 1px solid black;
-    border-radius: 10px;
-    
-}
+
 a {
     color: #108ee9;
     text-decoration: none

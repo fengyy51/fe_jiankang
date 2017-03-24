@@ -1,16 +1,74 @@
+
 span.real-title-tizhi{
-	margin: 1em 0 1em 1em;
+	margin: 1rem 0 1rem 1rem;
 }
 .disable div.question-options{
 	display: none;
 }
 .active{
 	display: block;
+	font-weight: bold;
+}
+.active .question-no{
+	color: #24A117;
 }
 .question{
-	border-bottom-style: 1px solid gray;
+
+	display: block;
+	padding-top: 0rem ;
+	padding-bottom: 0rem;
+	border-bottom: 1px solid #EEE;
 }
-.addcolor{
-	background: #219E4E;
-	color: #FFF;
+.am-button-group:not([am-version]){
+	background-color: #f5f5f9;
+}
+.am-button:not([am-version]){
+	border-radius: 0rem;
+
+}
+.am-button:not([am-version]).white{
+	border: 1px solid #24A117;
+	cursor: pointer;
+	border-right-style: none;
+	/* border-radius: 1em; */
+	height: 0.35rem;
+	line-height:0.35rem;
+	margin-left: 0;
+	margin-right: 0;
+	font-family:Microsoft YaHei;
+	color:#24A117 ;
+	font-size: 0.16rem;
+	letter-spacing: 0.02rem;
+	background-color: #f5f5f9;
+}
+.am-button:not([am-version]).white:first-child{
+	border-radius: 0.1rem 0 0 0.1rem;
+
+}
+.am-button:not([am-version]).white:last-child{
+	border-radius: 0 0.1rem 0.1rem 0;
+	border-right-style: solid;
+}
+.tijiao{
+	border: 1px solid #24A117;
+	border-radius:0.1rem;
+	background-color: #24A117;
+	padding: 0.02rem 0rem 0.02rem 0.4rem;
+	margin: 0.15rem 25% 0.02rem 25%;
+	
+	
+}
+.tijiao img{
+	vertical-align: text-top;
+}
+.tijiao button{
+	border-style: none;
+	color: white;
+	background-color: #24A117;
+	/* letter-spacing: 0.02rem; */
+	padding-left: 0rem;
+	height: 0.35rem;
+	line-height:0.35rem;
+	
+
 }
