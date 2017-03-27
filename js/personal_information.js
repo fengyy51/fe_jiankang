@@ -2,31 +2,35 @@ $(document).ready(function(){
 
 	//个人信息
 	var children = [] ;
+	var imgAddr = ["../resource/img/account.png","../resource/img/image-text.png","../resource/img/machinery.png"] ;
 	children.push('<img src="https://os.alipayobjects.com/rmsportal/DzdIWWtLuecXwwj.jpeg" width="100%">') ;
-	children.push('<div class="am-list-header">个人信息</div>') ;
-	var s = [] ;
-	var content = ["我的资料管理","我的电子凭证","我的收货地址"] ;
-	for (var i = 0 ; i < content.length ; i ++ ) {
-		var st = '' ;
-		st += '<a href="#" class="am-list-item"><div class="am-list-content">' + content[i] + '</div></a>' ;
-		s.push(st) ;
-	}
-	children.push('<div class="am-list-body">' + s.join('') + '</div>') ;
-	$("#personalInformation").html(children[1] + children[2]) ;
 	$("#headPicture").html(children[0]) ;
 
-	//健康模块
-	
-	var children = [] ;
-	children.push('<div class="am-list-header">关注健康</div>') ;
 	s = [] ;
-	var content = ["体质测评","爱康商城"] ;
-	for (var i = 0 ; i < content.length ; i ++ ) {
-		var st = '' ;
-		st += '<a href="#" class="am-list-item"><div class="am-list-content">' + content[i] + '</div></a>' ;
-		s.push(st) ;
-	}
-	children.push('<div class="am-list-body">' + s.join('') + '</div>') ;
-	$("#healthModule").html(children.join('')) ;
+	s.push('<div class="am-list-body">') ;
+	var children ;
+	var content = ["&nbsp&nbsp我的资料管理","&nbsp&nbsp我的电子凭证","&nbsp&nbsp我的收货地址"] ;
+	children = addList(content,imgAddr) ;
+	s.push(children) ;
+	s.push('<div class="am-whitespace ws10px"></div>') ;
+	
+	
+	//健康模块
+	var imgAddr = ["../resource/img/保障.png","../resource/img/cart.png"] ;
+	var children ;
+	var content = ["&nbsp&nbsp体质测评","&nbsp&nbsp爱康商城"] ;
+	children = addList(content,imgAddr) ;
+	s.push(children) ;
+	s.push('<div class="am-whitespace ws10px"></div>') ;
+	
+	//区块链
+	var imgAddr = ["../resource/img/积分.png","../resource/img/卡包.png","../resource/img/pic.png"] ;
+	var children ;
+	var content = ["&nbsp&nbsp积分管理","&nbsp&nbsp电子钱包","&nbsp&nbsp区块链公示"] ;
+	children = addList(content,imgAddr) ;
+	s.push(children) ;
+	
+	s.push('</div>') ;
 
+	$("#personalInformation").html( s.join('') ) ;
 }) ;

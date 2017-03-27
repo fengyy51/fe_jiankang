@@ -1,20 +1,14 @@
 $(document).ready(function(){
 	function addChildren() {
-		var name = ["phoneNumber","password","confirmPassword","identifyCode"] ;
-		var placeholder = ["输入手机号","输入密码(6-15位)","确认密码","输入验证码"] ;
-		var type = ["text","password","password","text"] ;
+		var name = ["phoneNumber","identifyCode"] ;
+		var placeholder = ["输入手机号","输入验证码"] ;
+		var type = ["text","text"] ;
 		var div = [] ;
 		for (var i = 0 ; i < name.length ; i++) {
 			var s = '<div class="am-list-item am-input-autoclear"><div class="am-list-control"> \
 				<input id="'+ name[i] +'" type="' + type[i] + '" placeholder="'+ placeholder[i] +'" value=""></div>'
 			if (i == 0) {
 				s += '<div class="am-list-button"><button type="button" id="sendIdentifyCode">发送校验码</button></div>' ;
-			}
-			if (i == 1) {
-				s += '<div class="am-list-extra" id="checkPassword"></div>' ;
-			}
-			if (i == 2) {
-				s += '<div class="am-list-extra" id="checkConfirmPassword"></div>' ;
 			}
 			s += '</div>' ;
 			div.push(s) ;
@@ -23,12 +17,11 @@ $(document).ready(function(){
 		return s ;
 	} ;
 	var children = [] ;
-	children.push('<div class="am-ft-center">会员注册</div>') ;
-	children.push('<div class="am-whitespace ws30px"></div>') ;
+	children.push('<div class="am-whitespace ws50px"></div>') ;
 	children.push('<div class="am-list form">') ;
 	children.push('<div class="am-whitespace ws30px"></div>') ;
 	children.push('<button type="button" class="am-button" id="signup">注册</button>') ;
-	children[2] += ( addChildren() + '</div>' ) ;
+	children[1] += ( addChildren() + '</div>' ) ;
 	$("#register").addClass("am-wingblank wb30px") ;
 	$("#register").html(children.join('')) ;
 
@@ -51,7 +44,7 @@ $(document).ready(function(){
 	}) ;
 
 	//检测密码合法性
-
+	/*
 	$("#password").blur(function(){
 		var $r = $("#password") ;
 		if ($r.val().length < 6  | $r.val().length > 15) {
@@ -85,7 +78,7 @@ $(document).ready(function(){
 			$r.removeClass("am-list-item-error") ;
 		}
 	}) ;
-
+	*/
 	//注册按钮
 	$("#signup").click(function(){
 		var $phoneNumber = document.getElementById("phoneNumber") ;
