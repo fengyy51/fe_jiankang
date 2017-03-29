@@ -5,7 +5,9 @@ $(document).ready(function(){
 	currentUrl.pop() ;
 	currentUrl = currentUrl.join("/") ;
 	//ajax
-
+	var url = location.search; //获取url中"?"符后的字串  
+	alert(location.search) ;
+   
 	var openId = getQueryString("openid") ;
 	alert(openId) ;
 	$.ajax({
