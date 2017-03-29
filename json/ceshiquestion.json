@@ -1,0 +1,33 @@
+
+{
+"data":{
+	"item":[
+		
+		{"tagID":"1","content":"您精力充沛么","tizhi":["pinghezhi"]},
+		{"tagID":"2","content":"您容易疲乏么","tizhi":["qixuzhi","pinghezhi"]},
+		{"tagID":"3","content":"您容易气短（呼吸短促，接不上气）吗","tizhi":["qixuzhi"]},
+		{"tagID":"4","content":"您容易心慌吗","tizhi":["qixuzhi"]},
+		{"tagID":"5","content":"您容易头晕或站立时晕眩吗","tizhi":["qixuzhi"]},
+		{"tagID":"6","content":"您喜欢安静、懒得说话吗","tizhi":["qixuzhi"]},
+		{"tagID":"7","content":"您说话声音低弱无力吗","tizhi":["qixuzhi"]},
+		{"tagID":"8","content":"您感到闷闷不乐、情绪低沉吗","tizhi":["qiyuzhi","pinghezhi"]},
+		{"tagID":"9","content":"您容易精神紧张、焦虑不安吗","tizhi":["qiyuzhi"]},
+		{"tagID":"10","content":"您多愁善感、感情脆弱吗","tizhi":["qiyuzhi"]},
+		{"tagID":"11","content":"您容易感到害怕或受到惊吓吗","tizhi":["qiyuzhi"]},
+		{"tagID":"12","content":"您肋部或乳房胀痛吗","tizhi":["qiyuzhi"]},
+		{"tagID":"13","content":"您感到胸闷或腹部胀满吗","tizhi":["tanshizhi"]},
+		{"tagID":"14","content":"您无缘无故叹气吗","tizhi":["qiyuzhi"]},
+		{"tagID":"15","content":"您感到身体沉重不轻松或不爽快吗","tizhi":["tanshizhi"]}
+	]
+	
+
+	}
+}
+		
+	
+
+	
+	
+
+
+	

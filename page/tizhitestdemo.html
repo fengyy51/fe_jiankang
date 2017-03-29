@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>中医体质测试</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,max-scale=1,use-scalable=no">
+    <!--     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="../css/antui.css">
+    <link rel="stylesheet" type="text/css" href="../css/test.css">
+</head>
+<body>
+	<body class="scroll">
+    <form id="tizhitest" method="post" class="scroll">
+        <div class="title-tizhi">
+            <p>
+                请根据近一年的感受选择！
+            </p>
+        </div>        
+        <div class="question active" id="real-title-tizhi">
+            <p><span class="real-title-tizhi">请选择性别:</span></p>
+            <div class="question-options">
+                
+                <div class="am-button-group " role="group"   id="sex-select">
+                     <button type="button" class="am-button white btn-sex" id="btn-sex-male">男</button>
+                     <button type="button" class="am-button white btn-sex" id="btn-sex-female">女</button>
+                </div>
+            </div>
+        </div>
+        <div class="container question-container" id="questions">
+           
+        </div>
+         <div class="question sixty disable num " id="female" name=16 tizhi="shirezhi">
+            <p class="disable"><span class="question-no ">16</span>/60 您带下色黄（白带颜色发黄）吗？（限女性回答）</p>
+            
+            <!-- @@include('include/button-tizhi.html') -->
+             <div class="question-options">
+                <div class="am-button-group " role="group" aria-label=""  >
+                     <button type="button" class="am-button white " value=1>没有</button>
+                     <button type="button" class="am-button white " value=2 >很少</button>
+                     <button type="button" class="am-button white " value=3>有时</button>
+                     <button type="button" class="am-button white " value=4>经常</button>
+                     <button type="button" class="am-button white " value=5>总是</button>
+                </div>                
+            </div>
+        </div>
+         <div class="question  sixty disable num " id="male" name=16 tizhi="shirezhi">
+            <p class="disable"><span class="question-no ">16</span>/60 您的阴囊部位潮湿吗？（限男性回答）</p>
+            
+            <!-- @@include('include/button-tizhi.html') -->
+             <div class="question-options">
+                <div class="am-button-group " role="group" aria-label=""  >
+                     <button type="button" class="am-button white " value=1>没有</button>
+                     <button type="button" class="am-button white " value=2 >很少</button>
+                     <button type="button" class="am-button white " value=3>有时</button>
+                     <button type="button" class="am-button white " value=4>经常</button>
+                     <button type="button" class="am-button white " value=5>总是</button>
+                </div>                
+            </div>
+        </div>
+       
+        </form>
+        <script type="text/javascript" src="../js/lib/zepto.js"></script>
+    <script type="text/javascript" src="../js/tizhitest.js"></script>
+</body>
+</html>
