@@ -7,6 +7,7 @@ $(document).ready(function(){
 	//ajax
    
 	var openId = $.fn.cookie("openId") ;
+	console.log(openId) ;
 	if (openId == null) {
 		alert(openId) ;
 		$.ajax({
