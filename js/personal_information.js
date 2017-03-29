@@ -6,18 +6,8 @@ $(document).ready(function(){
 	currentUrl = currentUrl.join("/") ;
 	//ajax
 
-	var url = location.search; //获取url中"?"符后的字串  
-	var theRequest = new Object();  
-	if (url.indexOf("?") != -1) {  
-		var str = url.substr(1);  
-		strs = str.split("&");  
-		for(var i = 0; i < strs.length; i ++) {  
-			alert(strs[i].split("=")[0]) ;
-			alert(strs[i].split("=")[1]) ;
-			theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);  
-		}  
-	}
-	var openId = theRequest["openid"] ;
+	var openId = getQueryString("openid") ;
+	alert(openId) ;
 	$.ajax({
 		url : severAddress + "/user/is-auth" ,
 		type : "POST" ,
@@ -27,7 +17,7 @@ $(document).ready(function(){
 			//是否授权
 			alert("success openid") ;
 			if (data.data.result == false) {
-				var code = theRequest["code"] ;
+				var code = getQueryString("code") ;
 				alert("code:" + code) ;
 				$.ajax({
 					url : severAddress + "/user/do-auth" ,
@@ -45,6 +35,7 @@ $(document).ready(function(){
 				});
 			} else {
 				//是否已经注册
+				alert("yijingshouquan") ;
 				if (data.data.isRegister == false) {
 					window.location.href = currentUrl + "/sign_up.html" ;
 				} else {
