@@ -1,3 +1,4 @@
+
 /* #real-title-tizhi p span{
 	text-align: left;
 }
@@ -83,6 +84,16 @@ p.active{
 	padding-left: 0rem;
 	height: 0.35rem;
 	line-height:0.35rem;
+	
+
+
+span.real-title-tizhi{
+	margin: 1em 0 1em 1em;
+}
+.hidden{
+	visibility: hidden;
+}
+.question-no{
 	
 
 }
