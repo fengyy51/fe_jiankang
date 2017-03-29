@@ -20,7 +20,7 @@ $(document).ready(function(){
 	children.push('<div class="am-whitespace ws50px"></div>') ;
 	children.push('<div class="am-list form">') ;
 	children.push('<div class="am-whitespace ws30px"></div>') ;
-	children.push('<button type="button" class="am-button" id="signup">注册</button>') ;
+	children.push('<button type="button" class="am-button" id="signup">保&nbsp&nbsp存</button>') ;
 	children[1] += ( addChildren() + '</div>' ) ;
 	$("#register").addClass("am-wingblank wb30px") ;
 	$("#register").html(children.join('')) ;
@@ -99,3 +99,5 @@ $(document).ready(function(){
 	}) ;
 
 }) ;
+
+

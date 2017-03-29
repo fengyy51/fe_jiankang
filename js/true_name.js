@@ -16,7 +16,8 @@ $(document).ready(function(){
 	$("#submitTrueName").click( function(){
 		var name = $("#name").val() ;
 		var cardNum = $("#cardNum").val() ;
-		alert(name) ;
-		alert(cardNum) ;
+		if (cardNum.length() != 18) {
+			$("#dialog").css("aria-hidden","false") ;
+		}
 	}) ;
 }) ;

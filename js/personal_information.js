@@ -5,61 +5,47 @@ $(document).ready(function(){
 	currentUrl.pop() ;
 	currentUrl = currentUrl.join("/") ;
 	//ajax
-	var headurl ;
+
+	var url = location.search; //获取url中"?"符后的字串  
+	var theRequest = new Object();  
+	if (url.indexOf("?") != -1) {  
+		var str = url.substr(1);  
+		strs = str.split("&");  
+		for(var i = 0; i < strs.length; i ++) {  
+			theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);  
+		}  
+	}
+	var openId = theRequest["openid"] ;
 	$.ajax({
 		url : severAddress + "/user/is-auth" ,
 		type : "POST" ,
 		dataType : "json" ,
-		data : { "openId" :"oDvDiwlzaTUU4GHjKURJ4zu_xzGY" } ,
+		data : { "openId" : openId } ,
 		success : function(data) {
-			//是否注册
+			//是否授权
 			alert("success") ;
-			if (data.data.isRegister == false) {
-				alert("yes") ;
-				window.location.href = currentUrl + "/sign_up.html" ;
+			if (data.data.result == false) {
+				var code = theRequest["code"] ;
+				$.ajax({
+					url : severAddress + "/user/do-auth" ,
+					type : "POST" ,
+					dataType : "json" ,
+					data : { "code" :code } ,
+					success : function(data) {
+						var headurl = data.data.headImgUrl ;
+						loadDom(headurl) ;
+					} ,
+					error : function(data) {
+						alert("error") ;
+					} ,
+				});
 			} else {
-				//是否已经被授权
-				if (data.data.result == false) {
-
+				//是否已经注册
+				if (data.data.isRegister == false) {
+					window.location.href = currentUrl + "/sign_up.html" ;
 				} else {
-					headurl = data.data.headImgUrl ;
-					var children ;
-					children = '<img src="../' + headurl + '" width="100%">' ;
-					$("#headPicture").html(children) ;
-
-					//add dom
-					//个人信息
-					s = [] ;
-					var imgAddr = ["../resource/img/account.png","../resource/img/image-text.png","../resource/img/machinery.png"] ;
-					s.push('<div class="am-list-body">') ;
-					var children ;
-					var content = ["&nbsp&nbsp我的资料管理","&nbsp&nbsp我的电子凭证","&nbsp&nbsp我的收货地址"] ;
-					var addr = [currentUrl + "/personal_information_manage.html",currentUrl + "/electronic_certificate.html", currentUrl + "/shop_address.html"] ;
-					children = addListAddr(content,imgAddr,addr) ;
-					s.push(children) ;
-					s.push('<div class="am-whitespace ws10px"></div>') ;
-					
-					
-					//健康模块
-					var imgAddr = ["../resource/img/保障.png","../resource/img/cart.png"] ;
-					var children ;
-					var content = ["&nbsp&nbsp体质测评","&nbsp&nbsp爱康商城"] ;
-					var addr = [currentUrl + "/tizhi.html",currentUrl + "/shopping.html"] ;
-					children = addListAddr(content,imgAddr,addr) ;
-					s.push(children) ;
-					s.push('<div class="am-whitespace ws10px"></div>') ;
-					
-					//区块链
-					var imgAddr = ["../resource/img/积分.png","../resource/img/卡包.png","../resource/img/pic.png"] ;
-					var children ;
-					var content = ["&nbsp&nbsp积分管理","&nbsp&nbsp电子钱包","&nbsp&nbsp区块链公示"] ;
-					var addr = [currentUrl + "/jifen.html",currentUrl + "/money.html", currentUrl + "/gongshi.html"] ;
-					children = addListAddr(content,imgAddr,addr) ;
-					s.push(children) ;
-					
-					s.push('</div>') ;
-
-					$("#personalInformation").html( s.join('') ) ;
+					var headurl = data.data.headImgUrl ;
+					loadDom(headurl) ;
 				}
 			}
 		} ,	
@@ -67,5 +53,44 @@ $(document).ready(function(){
 			alert("error") ;
 		} ,
 	}) ;
-		
+
+	//load dom
+	function loadDom(headurl) {
+		var children ;
+		children = '<img src="' + headurl + '" width="100%">' ;
+		$("#headPicture").html(children) ;
+
+		//个人信息
+		s = [] ;
+		var imgAddr = ["../resource/img/account.png","../resource/img/image-text.png","../resource/img/machinery.png"] ;
+		s.push('<div class="am-list-body">') ;
+		var children ;
+		var content = ["&nbsp&nbsp我的资料管理","&nbsp&nbsp我的电子凭证","&nbsp&nbsp我的收货地址"] ;
+		var addr = [currentUrl + "/personal_information_manage.html",currentUrl + "/electronic_certificate.html", currentUrl + "/shop_address.html"] ;
+		children = addListAddr(content,imgAddr,addr) ;
+		s.push(children) ;
+		s.push('<div class="am-whitespace ws10px"></div>') ;
+					
+					
+		//健康模块
+		var imgAddr = ["../resource/img/保障.png","../resource/img/cart.png"] ;
+		var children ;
+		var content = ["&nbsp&nbsp体质测评","&nbsp&nbsp爱康商城"] ;
+		var addr = [currentUrl + "/tizhi.html",currentUrl + "/shopping.html"] ;
+		children = addListAddr(content,imgAddr,addr) ;
+		s.push(children) ;
+		s.push('<div class="am-whitespace ws10px"></div>') ;
+					
+		//区块链
+		var imgAddr = ["../resource/img/积分.png","../resource/img/卡包.png","../resource/img/pic.png"] ;
+		var children ;
+		var content = ["&nbsp&nbsp积分管理","&nbsp&nbsp电子钱包","&nbsp&nbsp区块链公示"] ;
+		var addr = [currentUrl + "/jifen.html",currentUrl + "/money.html", currentUrl + "/gongshi.html"] ;
+		children = addListAddr(content,imgAddr,addr) ;
+		s.push(children) ;
+					
+		s.push('</div>') ;
+
+		$("#personalInformation").html( s.join('') ) ;
+	}
 }) ;
