@@ -12,14 +12,12 @@ $(document).ready(function(){
 		var str = url.substr(1);  
 		strs = str.split("&");  
 		for(var i = 0; i < strs.length; i ++) {  
+			alert(strs[i].split("=")[0]) ;
+			alert(strs[i].split("=")[1]) ;
 			theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);  
 		}  
 	}
 	var openId = theRequest["openid"] ;
-	alert("openId" + openId) ;
-	var code = theRequest["code"] ;
-	alert("code" + code) ;
-	alert("openid" + theRequest["openId"] ) ;
 	$.ajax({
 		url : severAddress + "/user/is-auth" ,
 		type : "POST" ,
