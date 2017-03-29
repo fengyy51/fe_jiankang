@@ -16,6 +16,7 @@ $(document).ready(function(){
 		}  
 	}
 	var openId = theRequest["openid"] ;
+	alert("openId" + openId) ;
 	$.ajax({
 		url : severAddress + "/user/is-auth" ,
 		type : "POST" ,
@@ -23,15 +24,17 @@ $(document).ready(function(){
 		data : { "openId" : openId } ,
 		success : function(data) {
 			//是否授权
-			alert("success") ;
+			alert("success openid") ;
 			if (data.data.result == false) {
 				var code = theRequest["code"] ;
+				alert("code:" + code) ;
 				$.ajax({
 					url : severAddress + "/user/do-auth" ,
 					type : "POST" ,
 					dataType : "json" ,
-					data : { "code" :code } ,
+					data : { "code" : code } ,
 					success : function(data) {
+						alert("success code") ;
 						var headurl = data.data.headImgUrl ;
 						loadDom(headurl) ;
 					} ,
