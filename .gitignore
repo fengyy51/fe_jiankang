@@ -1,3 +1,4 @@
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
@@ -5,4 +6,11 @@
 *.ipr
 fe_jiankang.iml
 index.html
+gulpfile.js
+dist/
+.idea/
+node_modules/
+
+deploy.sh
+.DS_Store
 

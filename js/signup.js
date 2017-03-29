@@ -1,8 +1,14 @@
 $(document).ready(function(){
 	function addChildren() {
+
 		var name = ["phoneNumber","password","confirmPassword","identifyCode"] ;
 		var placeholder = ["输入手机号","输入密码","确认密码","输入验证码"] ;
 		var type = ["text","password","password","text"] ;
+
+		var name = ["phoneNumber","identifyCode"] ;
+		var placeholder = ["输入手机号","输入验证码"] ;
+		var type = ["text","text"] ;
+
 		var div = [] ;
 		for (var i = 0 ; i < name.length ; i++) {
 			var s = '<div class="am-list-item am-input-autoclear"><div class="am-list-control"> \
@@ -17,12 +23,21 @@ $(document).ready(function(){
 		return s ;
 	} ;
 	var children = [] ;
+
 	children.push('<div class="am-ft-center">会员注册</div>') ;
 	children.push('<div class="am-whitespace ws30px"></div>') ;
 	children.push('<div class="am-list form">') ;
 	children.push('<div class="am-whitespace ws30px"></div>') ;
 	children.push('<button type="button" class="am-button" id="signup">注册</button>') ;
 	children[2] += ( addChildren() + '</div>' ) ;
+
+	children.push('<div class="am-whitespace ws50px"></div>') ;
+	children.push('<div class="am-list form">') ;
+	children.push('<div class="am-whitespace ws30px"></div>') ;
+	children.push('<button type="button" class="am-button" id="signup">保&nbsp&nbsp存</button>') ;
+	children[1] += ( addChildren() + '</div>' ) ;
+	$("#register").addClass("am-wingblank wb30px") ;
+
 	$("#register").html(children.join('')) ;
 
 	//发送校验码
@@ -42,6 +57,45 @@ $(document).ready(function(){
 		} ;
 		time($sendIdentifyCode) ;
 	}) ;
+
+
+
+	//检测密码合法性
+	/*
+	$("#password").blur(function(){
+		var $r = $("#password") ;
+		if ($r.val().length < 6  | $r.val().length > 15) {
+			$("#checkPassword").html("密码长度不合法") ;
+			$r.parent().parent().addClass("am-list-item-error") ;
+		}
+	}) ;
+	
+	$("#password").focus(function(){
+		var $r = $("#password").parent().parent() ;
+		if ($r.hasClass("am-list-item-error")) {
+			$("#checkPassword").html("") ;
+			$r.removeClass("am-list-item-error") ;
+		}
+	}) ;
+	
+	//检测确认密码合法性
+
+	$("#confirmPassword").blur(function(){
+		var $r = $("#password") ;
+		if ($r.val() != $(this).val()) {
+			$("#checkConfirmPassword").html("两次输入密码不同") ;
+			$("#confirmPassword").parent().parent().addClass("am-list-item-error") ;
+		}
+	}) ;
+
+	$("#confirmPassword").focus(function(){
+		var $r = $(this).parent().parent() ;
+		if ($r.hasClass("am-list-item-error")) {
+			$("#checkConfirmPassword").html("") ;
+			$r.removeClass("am-list-item-error") ;
+		}
+	}) ;
+	*/
 
 	//注册按钮
 	$("#signup").click(function(){
@@ -63,4 +117,9 @@ $(document).ready(function(){
 	}) ;
 
 
+
+
 }) ;
+
+
+
