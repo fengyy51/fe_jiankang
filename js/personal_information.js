@@ -5,11 +5,26 @@ $(document).ready(function(){
 	currentUrl.pop() ;
 	currentUrl = currentUrl.join("/") ;
 	//ajax
-	var url = location.search; //获取url中"?"符后的字串  
-	alert(location.search) ;
    
-	var openId = getQueryString("openid") ;
-	alert(openId) ;
+	var openId = $.cookie("openId") ;
+	if (openId == null) {
+		$.ajax({
+			url : severAddress + "/user/do-auth" ,
+			type : "POST" ,
+			dataType : "json" ,
+			async : false ,
+			data : { "code" : getQueryString("code") } ,
+			success : function(data) {
+				openId = data.data.openId ;
+				$.cookie("openId",openId ,{ expires:30  }) ;
+				window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx63d2b1530c8bb787&redirect_uri=http%3a%2f%2fhuzhu.liuhongnan.com%2fpage%2fpersonal_information.html&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect" ;
+			} ,
+			error : function(data) {
+				alert("error") ;
+			} ,
+		});
+	}
+
 	$.ajax({
 		url : severAddress + "/user/is-auth" ,
 		type : "POST" ,
