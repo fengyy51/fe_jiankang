@@ -17,6 +17,9 @@ $(document).ready(function(){
 	}
 	var openId = theRequest["openid"] ;
 	alert("openId" + openId) ;
+	var code = theRequest["code"] ;
+	alert("code" + code) ;
+	alert("openid" + theRequest["openId"] ) ;
 	$.ajax({
 		url : severAddress + "/user/is-auth" ,
 		type : "POST" ,
