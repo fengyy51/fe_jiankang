@@ -6,8 +6,9 @@ $(document).ready(function(){
 	currentUrl = currentUrl.join("/") ;
 	//ajax
    
-	var openId = $.cookie("openId") ;
+	var openId = $.fn.cookie("openId") ;
 	if (openId == null) {
+		alert(openId) ;
 		$.ajax({
 			url : severAddress + "/user/do-auth" ,
 			type : "POST" ,
@@ -16,7 +17,7 @@ $(document).ready(function(){
 			data : { "code" : getQueryString("code") } ,
 			success : function(data) {
 				openId = data.data.openId ;
-				$.cookie("openId",openId ,{ expires:30 ,path:"http://huzhu.liuhongnan.com/" }) ;
+				$.cookie("openId",openId ,{ expires:30 ,path:"/" }) ;
 				window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx63d2b1530c8bb787&redirect_uri=http%3a%2f%2fhuzhu.liuhongnan.com%2fpage%2fpersonal_information.html&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect" ;
 			} ,
 			error : function(data) {
