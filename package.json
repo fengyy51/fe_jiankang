@@ -1,0 +1,32 @@
+{
+  "name": "malldemo",
+  "version": "1.0.0",
+  "description": "this is a demo of mall",
+  "main": "index.html",
+  "dependencies": {
+  	"gulp":"^3.9.1",
+    "gulp-file-include":"^1.0.0",
+    "gulp-utf8-convert":"^0.0.7"
+    
+  },
+  "devDependencies": {
+  	
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengyy51/fe_jiankang.git"
+  },
+  "keywords": [
+    "mall",
+    "firstpage"
+  ],
+  "author": "fyy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fengyy51/fe_jiankang/issues"
+  },
+  "homepage": "https://github.com/fengyy51/fe_jiankang#readme"
+}
