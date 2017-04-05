@@ -4,74 +4,44 @@ $(document).ready(function(){
 	currentUrl = currentUrl.split("/") ;
 	currentUrl.pop() ;
 	currentUrl = currentUrl.join("/") ;
-	//ajax
-   
-	var openId = $.fn.cookie("openId") ;
-	console.log(openId) ;
-	if (openId == null) {
-		alert(openId) ;
-		$.ajax({
-			url : severAddress + "/user/do-auth" ,
-			type : "POST" ,
-			dataType : "json" ,
-			async : false ,
-			data : { "code" : getQueryString("code") } ,
-			success : function(data) {
-				openId = data.data.openId ;
-				$.cookie("openId",openId ,{ expires:30 ,path:"/" }) ;
-				window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx63d2b1530c8bb787&redirect_uri=http%3a%2f%2fhuzhu.liuhongnan.com%2fpage%2fpersonal_information.html&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect" ;
-			} ,
-			error : function(data) {
-				alert("error") ;
-			} ,
-		});
-	}
 
-	$.ajax({
-		url : severAddress + "/user/is-auth" ,
-		type : "POST" ,
-		dataType : "json" ,
-		data : { "openId" : openId } ,
-		success : function(data) {
-			//是否授权
-			alert("success openid") ;
-			if (data.data.result == false) {
-				var code = getQueryString("code") ;
-				alert("code:" + code) ;
-				$.ajax({
-					url : severAddress + "/user/do-auth" ,
-					type : "POST" ,
-					dataType : "json" ,
-					data : { "code" : code } ,
-					success : function(data) {
-						alert("success code") ;
-						var headurl = data.data.headImgUrl ;
-						loadDom(headurl) ;
-					} ,
-					error : function(data) {
-						alert("error") ;
-					} ,
-				});
-			} else {
-				//是否已经注册
-				alert("yijingshouquan") ;
-				if (data.data.isRegister == false) {
-					window.location.href = currentUrl + "/sign_up.html" ;
+	var state = getQueryString("state") ;
+	if (state != null) {
+		var code = getQueryString("code") ;
+		var data = {"code" : code} ;
+		Ajax(data , "post" , severAddress + "/user/do-auth" , 
+			function(data) {
+				/*var data = JSON.parse(data) ;
+				var headurl = data.data.headImgUrl ;
+					loadDom(headurl) ;*/
+				window.location.href = "http://huzhu.liuhongnan.com/page/personal_information.html" ;
+			
+			}
+			, true
+		) ;
+	} else {
+		var data = {} ;
+		Ajax(data , "post" , severAddress + "/user/get-wechat-info" ,
+			function(data) {
+				var data = JSON.parse(data) ;
+				if (data.isAuth == false) {
+					window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx63d2b1530c8bb787&redirect_uri=http%3a%2f%2fhuzhu.liuhongnan.com%2fpage%2fpersonal_information.html&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect" ;
+
+				} else if(data.isLogin == false) {
+					window.location.href = "http://huzhu.liuhongnan.com/page/sign_up.html" ;
 				} else {
 					var headurl = data.data.headImgUrl ;
 					loadDom(headurl) ;
 				}
 			}
-		} ,	
-		error : function(data) {
-			alert("error") ;
-		} ,
-	}) ;
+			,true
+		) ;
+	}
 
 	//load dom
 	function loadDom(headurl) {
 		var children ;
-		children = '<img src="' + headurl + '" width="100%">' ;
+		children = '<img src="' + headurl + '" width="100%" display:"block" height="550px">' ;
 		$("#headPicture").html(children) ;
 
 		//个人信息

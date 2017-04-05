@@ -21,3 +21,14 @@ body {
 .am-list-body .am-list-item .am-list-content {
 	color: #0b0c0ccc ;
 }
+
+#yanzhengmaImg {
+	width: 193px ;
+	height: 72px ;
+}
+
+#yanzhengmaID {
+	display: block;
+	width: 193px ;
+	height: 72px ;
+}

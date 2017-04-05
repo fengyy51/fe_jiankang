@@ -28,28 +28,12 @@ $(document).ready(function(){
 		children.push('<div class="am-whitespace ws50px"></div>') ;
 		children.push('<div class="am-list form">') ;
 		children.push('<div class="am-whitespace ws30px"></div>') ;
-		children.push('<button type="button" class="am-button" id="signup">aaa</button>') ;
+		children.push('<button type="button" class="am-button" id="signup">登&nbsp&nbsp陆</button>') ;
 		children[1] += ( addChildren() + '</div>' ) ;
 		$("#register").addClass("am-wingblank wb30px") ;
 		$("#register").html(children.join('')) ;
 		document.getElementById("sendIdentifyCode").setAttribute("disabled",true) ;
-		//alert("wowowo") ;
 	}	
-
-	var data = {} ;
-	var thisLogin = true ;
-	Ajax(data , "get" , severAddress + "/user/is-login" ,
-		function(data) {
-			var data = JSON.parse(data) ;
-			if (data.result == true) {
-				$("#signup").html("登&nbsp&nbsp陆") ;
-			} else {
-				$("#signup").html("保&nbsp&nbsp存") ;
-				thisLogin = false ;
-			}
-		}
-	 	,true
-	 ) ;
 
 	//发送ajax请求获得验证码
 	var xhr = new XMLHttpRequest();    
@@ -113,43 +97,19 @@ $(document).ready(function(){
 		if (checkPhone(phoneNumber) == false) {
 			alert("手机号不合法") ;
 		} else {
-			if (thisLogin == false) {
-				var $sendIdentifyCode = document.getElementById("sendIdentifyCode") ;
-				var data = {"mobile" : phoneNumber} ;
-				Ajax(data , "get" , severAddress + "/user/mobile-is-repeat" , 
-					function(data) {
-						var data = JSON.parse(data) ;
-						if (data.isAuth == false) {
-							window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx63d2b1530c8bb787&redirect_uri=http%3a%2f%2fhuzhu.liuhongnan.com%2fpage%2fpersonal_information.html&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect" ;
-
-						}
-						if (data.result == true) {
-							$sendIdentifyCode.setAttribute("disabled" , true) ;
-						} else {
-							$sendIdentifyCode.removeAttribute("disabled") ;
-						}
-					} 
-					,true
-				) ;
-			} else {
-				var $sendIdentifyCode = document.getElementById("sendIdentifyCode") ;
-				var data = {"mobile" : phoneNumber} ;
-				Ajax(data , "get" , severAddress + "/user/mobile-is-repeat" , 
-					function(data) {
-						var data = JSON.parse(data) ;
-						if (data.isAuth == false) {
-							window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx63d2b1530c8bb787&redirect_uri=http%3a%2f%2fhuzhu.liuhongnan.com%2fpage%2fpersonal_information.html&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect" ;
-
-						} 
-						if (data.result == false) {
-							$sendIdentifyCode.setAttribute("disabled" , true) ;
-						} else {
-							$sendIdentifyCode.removeAttribute("disabled") ;
-						}
-					} 
-					,true
-				) ;
-			}
+			var $sendIdentifyCode = document.getElementById("sendIdentifyCode") ;
+			var data = {"mobile" : phoneNumber} ;
+			Ajax(data , "get" , severAddress + "/user/mobile-is-repeat" , 
+				function(data) {
+					var data = JSON.parse(data) ;
+					if (data.data.result == true) {
+						$sendIdentifyCode.setAttribute("disabled" , true) ;
+					} else {
+						$sendIdentifyCode.removeAttribute("disabled") ;
+					}
+				} 
+				//,true
+			) ;
 		}	
 	}) ;
 
@@ -198,16 +158,9 @@ $(document).ready(function(){
 								//注册
 								var mobile = $("#phoneNumber").val() ;
 								var data = {"mobile": mobile} ;
-								thisurl = severAddress ;
-								if ( thisLogin == false ) {
-									thisurl = thisurl + "/user/register" ;
-								} else {
-									thisurl = thisurl + "/user/login" ;
-								}
-								Ajax(data , "post" ,thisurl , 
+								Ajax(data , "post" ,severAddress + "/user/login" , 
 									function(data) {
 										var data = JSON.parse(data) ;
-										alert("成功") ;
 										var currentUrl = window.location.href ;
 										currentUrl = currentUrl.split("/") ;
 										currentUrl.pop() ;
