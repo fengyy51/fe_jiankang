@@ -1,20 +1,20 @@
 $(document).ready(function(){
-
 	var currentUrl = window.location.href ;
 	currentUrl = currentUrl.split("/") ;
 	currentUrl.pop() ;
 	currentUrl = currentUrl.join("/") ;
-
 	var state = getQueryString("state") ;
 	if (state != null) {
 		var code = getQueryString("code") ;
 		var data = {"code" : code} ;
-		Ajax(data , "post" , severAddress + "/user/do-auth" , 
+		//Ajax(data , "post" , severAddress + "/user/do-auth" , 
+		Ajax(data , "post" , severAddress + "/user/test" , 
 			function(data) {
 				/*var data = JSON.parse(data) ;
 				var headurl = data.data.headImgUrl ;
 					loadDom(headurl) ;*/
-				window.location.href = "http://huzhu.liuhongnan.com/page/personal_information.html" ;
+				//window.location.href = "http://huzhu.liuhongnan.com/page/personal_information.html" ;
+				window.location.href = uri + "/page/personal_information.html" ;
 			
 			}
 			, true
@@ -25,10 +25,12 @@ $(document).ready(function(){
 			function(data) {
 				var data = JSON.parse(data) ;
 				if (data.isAuth == false) {
-					window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx63d2b1530c8bb787&redirect_uri=http%3a%2f%2fhuzhu.liuhongnan.com%2fpage%2fpersonal_information.html&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect" ;
-
+					//var https = encodeURI("https://huzhu.liuhongnan.com/page/personal_information.html") ;
+					//window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx63d2b1530c8bb787&redirect_uri=http%3a%2f%2fhuzhu.liuhongnan.com%2fpage%2fpersonal_information.html&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect" ;
+					window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx63d2b1530c8bb787&redirect_uri=https%3a%2f%2fhuzhu.liuhongnan.com%2fpage%2fpersonal_information.html&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect" ;
 				} else if(data.isLogin == false) {
-					window.location.href = "http://huzhu.liuhongnan.com/page/sign_up.html" ;
+					//window.location.href = "http://huzhu.liuhongnan.com/page/sign_up.html" ;
+					window.location.href = uri + "/page/sign_up.html" ;
 				} else {
 					var headurl = data.data.headImgUrl ;
 					loadDom(headurl) ;

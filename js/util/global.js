@@ -1,9 +1,9 @@
-severAddress = "http://123.57.37.50:8081" ;
+severAddress = "https://123.57.37.50:8081" ;
 //severAddress = "http://127.0.0.1:8080" ;
 //severAddress = "http://169.254.212.67:8081" ;
 appid = 'wx63d2b1530c8bb787' ;
-redirect_uri = encodeURI("http://huzhu.liuhongnan.com") ;
-uri = "http://huzhu.liuhongnan.com" ;
+redirect_uri = encodeURI("https://huzhu.liuhongnan.com") ;
+uri = "https://huzhu.liuhongnan.com" ;
 
 function Ajax(postData , method , url , f) {
 	var query = "" ;
@@ -24,7 +24,7 @@ function Ajax(postData , method , url , f) {
 		}
 	}
 
-	var xhr = new XMLHttpRequest() ;
+	var xhr = new loadXMLDoc() ;
 	xhr.responseType = "text" ;
 	if (arguments.length == 5) {
 		xhr.withCredentials = arguments[4] ;
@@ -51,6 +51,16 @@ function Ajax(postData , method , url , f) {
 	}
 }
 
+function loadXMLDoc()
+{
+	var xmlhttp = null ;
+	if (window.XMLHttpRequest) {// code for all new browsers
+  		xmlhttp = new XMLHttpRequest();
+  	} else if (window.ActiveXObject) {// code for IE5 and IE6
+  		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  	}
+  	return xmlhttp ;
+}
 
 function isAuth_isLogin(data) {
 	var data = JSON.parse(data) ;
@@ -58,6 +68,6 @@ function isAuth_isLogin(data) {
 		window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx63d2b1530c8bb787&redirect_uri=http%3a%2f%2fhuzhu.liuhongnan.com%2fpage%2fpersonal_information.html&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect" ;
 
 	} else if(data.isLogin == false) {
-		window.location.href = "http://huzhu.liuhongnan.com/page/sign_up.html" ;
+		window.location.href = uri + "/page/sign_up.html" ;
 	}
 }	
