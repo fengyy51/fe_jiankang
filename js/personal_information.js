@@ -10,10 +10,10 @@ $(document).ready(function() {
         Ajax(data, "post", severAddress + "/user/do-auth",
             function(data) {
                 var data = JSON.parse(data);
-                var headurl = data.data.headImgUrl;
-                loadDom(headurl);
+                // var headurl = data.data.headImgUrl;
+                // loadDom(headurl);
                 //window.location.href = "http://huzhu.liuhongnan.com/page/personal_information.html" ;
-                // window.location.href = uri + "/page/personal_information.html" ;
+                window.location.href = uri + "/page/sign_up.html" ;
 
             }, true
         );
